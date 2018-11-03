@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Touch MIDI Basic Template</title>
+    <link rel="stylesheet" href="css/touchmidi.css">
+</head>
+
+<body onload="init()">
+
+    <div class="main_column" style="width:100%">
+
+        <div class="row">
+            <div class="column" style="flex:1">
+                <strong>FX 1: Reverb</strong>
+            </div>
+
+            <div class="column" style="flex:20">
+                <div class="row" style="flex: 2">
+                    <div class="encoder" label="D/W 1" midicc="1, 20" colour="#ff3300"></div>
+                    <div class="encoder" label="HP" midicc="1, 21"></div>
+                    <div class="encoder" label="LP" midicc="1, 22"></div>
+                    <div class="encoder" label="SIZE" midicc="1, 23"></div>
+                </div>
+
+                <div class="row">
+                    <div class="button toggle" label="ON" midicc="1, 24, 0, 127" colour="#ffff00"></div>
+                    <div class="button" label="RST" midicc="1, 25, 0, 127" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="FRZ" midicc="1, 26, 0, 127" colour="#aaaaaa"></div>
+                    <div class="button" label="-" midicc="1, 27, 0, 127" colour="#888888"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="column" style="flex:1">
+                <strong>FX 2: Delay</strong>
+            </div>
+
+            <div class="column" style="flex:20">
+                <div class="row" style="flex: 2">
+                    <div class="encoder" label="D/W 2" midicc="1, 28" colour="#ff3300"></div>
+                    <div class="encoder" label="FILTER" midicc="1, 29" colour="#ff00dd"></div>
+                    <div class="encoder" label="FEEBK" midicc="1, 30" colour="#ff00dd"></div>
+                    <div class="encoder" label="RATE" midicc="1, 31" colour="#ff00dd"></div>
+                </div>
+
+                <div class="row">
+                    <div class="button toggle" label="ON" midicc="1, 32, 0, 127" colour="#ffff00"></div>
+                    <div class="button" label="RST" midicc="1, 33, 0, 127" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="FRZ" midicc="1, 34, 0, 127" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="SPR" midicc="1, 35, 0, 127" colour="#aaaaaa"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- **** Include JS libraries **** -->
+    <script src="lib/slider.js"></script>
+    <script src="lib/button.js"></script>
+    <script src="lib/encoder.js"></script>
+    <script src="lib/xypad.js"></script>
+    <script src="lib/midi.js"></script>
+    <script src="lib/touchmidi.js"></script>
+</body>
+
+</html>
