@@ -3,55 +3,111 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Touch MIDI Basic Template</title>
+    <title>Traktor Pro Touch</title>
     <link rel="stylesheet" href="css/touchmidi.css">
 </head>
 
 <body onload="init()">
 
-    <div class="main_column" style="width:100%">
+    <div class="main_column" style="width: 95%; padding-left: 2%">
 
-        <div class="row">
-            <div class="column" style="flex:1">
-                <strong>FX 1: Reverb</strong>
+        <div class="row"  style="flex: 2">
+
+            <!-- Decks -->
+
+            <div class="column">
+                
+                <div class="row">
+                    <h2>Deck 1</h2>
+                </div>
+                
+                <div class="row" style="flex: 2">
+                    <div class="button toggle" label="PLAY" midicc="1, 5, 127, 0" colour="#ffff00"></div>
+                    <div class="button direct" label="SYNC" midicc="1, 6, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="CUE" midicc="1, 7, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="CUP" midicc="1, 8, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button direct" label="TAP" midicc="1, 40, 127, 0" colour="#aaaaaa"></div>
+                </div>
+
+                <div class="row" style="flex: 2">
+                    <div class="button" label="LOOP 16" midicc="1, 9, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="LOOP 32" midicc="1, 10, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="&lt;&lt;" midicc="1, 11, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="&gt;&gt;" midicc="1, 12, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="CLK" midicc="1, 42, 127, 0" colour="#ffff00"></div>
+                </div>
+            
             </div>
 
-            <div class="column" style="flex:20">
+            <div class="column">
+
+                <div class="row">
+                    <h2>Deck 2</h2>
+                </div>
+                
                 <div class="row" style="flex: 2">
+                    <div class="button toggle" label="PLAY" midicc="1, 13, 127, 0" colour="#ffff00"></div>
+                    <div class="button direct" label="SYNC" midicc="1, 14, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="CUE" midicc="1, 15, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="CUP" midicc="1, 16, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button direct" label="TAP" midicc="1, 41, 127, 0" colour="#aaaaaa"></div>
+                </div>
+
+                <div class="row" style="flex: 2">
+                    <div class="button" label="LOOP 16" midicc="1, 17, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="LOOP 32" midicc="1, 18, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="&lt;&lt;" midicc="1, 19, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="&gt;&gt;" midicc="1, 20, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button toggleww" label="CLK" midicc="1, 43, 127, 0" colour="#ffff00"></div>
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div class="row" style="flex: 3">
+
+            <!-- FX -->
+
+            <div class="column" style="flex: 1">
+
+                <div class="column" style="flex: 1">
+                    <h2>FX1: Reverb</h2>
+                </div>
+
+                <div class="row" style="flex: 7">
                     <div class="encoder" label="D/W 1" midicc="1, 20" colour="#ff3300"></div>
                     <div class="encoder" label="HP" midicc="1, 21"></div>
                     <div class="encoder" label="LP" midicc="1, 22"></div>
                     <div class="encoder" label="SIZE" midicc="1, 23"></div>
                 </div>
 
-                <div class="row">
-                    <div class="button toggle" label="ON" midicc="1, 24, 0, 127" colour="#ffff00"></div>
-                    <div class="button" label="RST" midicc="1, 25, 0, 127" colour="#aaaaaa"></div>
-                    <div class="button toggle" label="FRZ" midicc="1, 26, 0, 127" colour="#aaaaaa"></div>
-                    <div class="button" label="-" midicc="1, 27, 0, 127" colour="#888888"></div>
+                <div class="row" style="flex: 5">
+                    <div class="button toggle" label="ON" midicc="1, 24, 127, 0" colour="#ffff00"></div>
+                    <div class="button" label="RST" midicc="1, 25, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="FRZ" midicc="1, 26, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button" label="-" midicc="1, 27, 127, 0" colour="#888888"></div>
                 </div>
             </div>
 
-        </div>
+            <div class="column" style="flex: 1">
 
-        <div class="row">
-            <div class="column" style="flex:1">
-                <strong>FX 2: Delay</strong>
-            </div>
+                <div class="column" style="flex:1">
+                    <h2>FX2: Delay</h2>
+                </div>
 
-            <div class="column" style="flex:20">
-                <div class="row" style="flex: 2">
+                <div class="row" style="flex: 7">
                     <div class="encoder" label="D/W 2" midicc="1, 28" colour="#ff3300"></div>
                     <div class="encoder" label="FILTER" midicc="1, 29" colour="#ff00dd"></div>
                     <div class="encoder" label="FEEBK" midicc="1, 30" colour="#ff00dd"></div>
                     <div class="encoder" label="RATE" midicc="1, 31" colour="#ff00dd"></div>
                 </div>
 
-                <div class="row">
-                    <div class="button toggle" label="ON" midicc="1, 32, 0, 127" colour="#ffff00"></div>
-                    <div class="button" label="RST" midicc="1, 33, 0, 127" colour="#aaaaaa"></div>
-                    <div class="button toggle" label="FRZ" midicc="1, 34, 0, 127" colour="#aaaaaa"></div>
-                    <div class="button toggle" label="SPR" midicc="1, 35, 0, 127" colour="#aaaaaa"></div>
+                <div class="row" style="flex: 5">
+                    <div class="button toggle" label="ON" midicc="1, 32, 127, 0" colour="#ffff00"></div>
+                    <div class="button" label="RST" midicc="1, 33, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="FRZ" midicc="1, 34, 127, 0" colour="#aaaaaa"></div>
+                    <div class="button toggle" label="SPR" midicc="1, 35, 127, 0" colour="#aaaaaa"></div>
                 </div>
             </div>
 

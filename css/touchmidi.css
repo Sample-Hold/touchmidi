@@ -5,6 +5,10 @@ body {
   font-family: Arial;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .main_column {
     display: flex;
     flex-direction: column;
